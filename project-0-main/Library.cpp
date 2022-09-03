@@ -74,6 +74,8 @@ void Library::organizeBooksByGenre() {
         else {
             std::vector<Book*> bookList = it->second;
             bookList.push_back(book);
+            //needed to assign the second element of the map to the booklist, as done in line 60
+            it->second = bookList;
         }
     }
 }

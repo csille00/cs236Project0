@@ -64,9 +64,10 @@ Book* BookCreator::createBook() {
                 if (book->hasHours()) {
                     throw "Hours can not be set twice for the same book.";
                 }
-                book->setPages(info.getInfo());
+                book->setHours(info.getInfo());
             }
             else if (check(info, Info::PAGES)) {
+                //this was hasHours instead of hasPages
                 if (book->hasPages()) {
                     throw "Pages can not be set twice for the same book.";
                 }
